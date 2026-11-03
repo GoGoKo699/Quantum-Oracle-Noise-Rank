@@ -1,0 +1,25 @@
+# Quantum Oracle Noise Rank
+
+> Coherent simulation of Boolean bit queries with known, fixed, memoryless post-query address noise. The complementary-state affine dimension controls the noisy-query overhead; an explicit rank-two family also has efficient gates.
+
+## Reader intentions
+
+- Understand the scientific question and principal guarantees: README.md, science/README.md.
+- Check the exact noise and access assumptions: science/model-and-results.md.
+- Reconstruct the environmental balancing lemma and known recovery: science/convex-code.md.
+- Verify first-match response routing, arbitrary-Kraus commutation, and the full bit/reference bound: science/oracle-compiler.md.
+- Derive search complexity or inspect memory, calibration and gate precision: science/search-and-resources.md.
+- Implement the explicit global rank-two channel example: science/structured-example.md.
+- Interpret the criterion without overstating rank as a classification: science/interpretation.md.
+- Compare previous oracle-distillation, filtration, noisy-search and convex-QEC results: references/related-work.md and references/references.bib.
+- Reproduce finite checks and understand their limits: verification/README.md, verification/verify.py, verification/expected-results.json and requirements.txt.
+
+## Essential distinctions
+
+The physical access is a Boolean bit oracle followed by noise on its address only. The channel is known, independent of the unknown Boolean function, fixed across calls and memoryless. The response, logical registers, branch tags, controls and stored query outputs are protected; the inaccessible environment is fresh on each call.
+
+The general theorem is a query-complexity guarantee. It does not make arbitrary channel-dependent preparation, decoding or calibration efficient. The phase-gradient example supplies an explicitly efficient family. No QRAM or freely controlled extension of an unknown phase-only oracle is assumed.
+
+All distances are unhalved diamond norms. The generic designated weight is eta=1/(d+1), with d+1<=r^2. The universal per-query bound is min{2,4(1-eta)^(L/2)}. The exact faulty-channel mixture is asserted for a unique marked address; the arbitrary-function theorem uses the uniform error bound. For d=0, one physical query is exact.
+
+Treat the analytical proofs as the source of dimension-independent claims. Numerical checks exercise finite fixtures and channel identities. Preserve the access, resource and attribution qualifications when summarizing the results.

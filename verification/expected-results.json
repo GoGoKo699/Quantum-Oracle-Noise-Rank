@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "tolerance": 2e-10,
+  "query_model": "fixed_known_memoryless_post_address_bit_oracle",
+  "fixtures": [
+    {
+      "fixture": "five_level_globally_rotated_amplitude_damping",
+      "seed": 482371,
+      "geometry": {
+        "address_dimension": 5,
+        "kraus_rank": 2,
+        "affine_dimension": 3,
+        "eta": 0.25,
+        "anchors": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "minimum_barycentric_coefficient": -0.6126751461260493,
+        "maximum_absolute_barycentric_coefficient": 1.0,
+        "common_gram_eigenvalues": [
+          0.13853791440838434,
+          0.861462085591616
+        ],
+        "maximum_complement_commutator_norm": 0.4072149224359253,
+        "trace_preservation_residual": 1.0552679808216013e-15,
+        "common_gram_residual": 1.1102230246251565e-16
+      },
+      "checks": [
+        {
+          "kind": "unique_mark_phase",
+          "L": 1,
+          "marked": 0,
+          "miss_probability": 0.75,
+          "physical_commutation_residual": 6.206335383118183e-17,
+          "response_leakage_probability": 0.0,
+          "exact_channel_entry_residual": 2.220446049250313e-16
+        },
+        {
+          "kind": "unique_mark_phase",
+          "L": 2,
+          "marked": 4,
+          "miss_probability": 0.5625,
+          "physical_commutation_residual": 5.887846720064157e-17,
+          "response_leakage_probability": 1.1102230246251565e-16,
+          "exact_channel_entry_residual": 5.551115123125783e-16
+        },
+        {
+          "kind": "full_bit_choi",
+          "L": 2,
+          "marked": [
+            4
+          ],
+          "logical_dimension": 10,
+          "reference_dimension": 10,
+          "miss_probability": 0.5625,
+          "physical_commutation_residual": 4.654751537338637e-17,
+          "response_leakage_probability": 1.3877787807814457e-17,
+          "choi_trace_preservation_residual": 8.326672684688674e-17,
+          "choi_minimum_eigenvalue": -2.1601047933920726e-16,
+          "choi_trace_norm_error_to_ideal": 0.6750000000000003,
+          "proved_diamond_upper_bound": 2.0,
+          "exact_faulty_bit_choi_residual": 8.333197259721873e-17,
+          "entangled_address_plus_target_residual": 8.327043244303851e-17
+        },
+        {
+          "kind": "full_bit_choi",
+          "L": 2,
+          "marked": [
+            1,
+            3,
+            4
+          ],
+          "logical_dimension": 10,
+          "reference_dimension": 10,
+          "miss_probability": 0.5625,
+          "physical_commutation_residual": 4.654751537338637e-17,
+          "response_leakage_probability": 1.3877787807814457e-17,
+          "choi_trace_preservation_residual": 8.326672684688674e-17,
+          "choi_minimum_eigenvalue": -1.753553566387571e-16,
+          "choi_trace_norm_error_to_ideal": 1.2376573218670988,
+          "proved_diamond_upper_bound": 2.0,
+          "entangled_address_plus_target_residual": 8.326707826813063e-17
+        }
+      ]
+    },
+    {
+      "fixture": "global_rank_two_random_stinespring",
+      "seed": 482372,
+      "geometry": {
+        "address_dimension": 4,
+        "kraus_rank": 2,
+        "affine_dimension": 3,
+        "eta": 0.25,
+        "anchors": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "minimum_barycentric_coefficient": 0.0,
+        "maximum_absolute_barycentric_coefficient": 1.0,
+        "common_gram_eigenvalues": [
+          0.392473732217736,
+          0.6075262677822644
+        ],
+        "maximum_complement_commutator_norm": 0.3429550940575279,
+        "trace_preservation_residual": 6.983851075274068e-16,
+        "common_gram_residual": 1.1102230246251565e-16
+      },
+      "checks": [
+        {
+          "kind": "full_bit_choi",
+          "L": 2,
+          "marked": [
+            1
+          ],
+          "logical_dimension": 8,
+          "reference_dimension": 8,
+          "miss_probability": 0.5625,
+          "physical_commutation_residual": 4.291468873614597e-17,
+          "response_leakage_probability": 8.326672684688674e-17,
+          "choi_trace_preservation_residual": 8.326672684688674e-17,
+          "choi_minimum_eigenvalue": -1.827901702224168e-16,
+          "choi_trace_norm_error_to_ideal": 0.7441175562369162,
+          "proved_diamond_upper_bound": 2.0,
+          "exact_faulty_bit_choi_residual": 5.608145567533477e-17,
+          "entangled_address_plus_target_residual": 8.358857825571716e-17
+        },
+        {
+          "kind": "full_bit_choi",
+          "L": 2,
+          "marked": [
+            0,
+            2
+          ],
+          "logical_dimension": 8,
+          "reference_dimension": 8,
+          "miss_probability": 0.5625,
+          "physical_commutation_residual": 4.291468873614597e-17,
+          "response_leakage_probability": 8.326672684688674e-17,
+          "choi_trace_preservation_residual": 9.71445146547012e-17,
+          "choi_minimum_eigenvalue": -1.664556598595288e-16,
+          "choi_trace_norm_error_to_ideal": 1.1135396497593764,
+          "proved_diamond_upper_bound": 2.0,
+          "entangled_address_plus_target_residual": 8.364800989526894e-17
+        }
+      ]
+    },
+    {
+      "fixture": "explicit_two_branch_phase_gradient",
+      "geometry": {
+        "address_dimension": 4,
+        "kraus_rank": 2,
+        "eta": 0.5,
+        "tag_dimension": 2,
+        "shift": 1,
+        "explicit_decoder_vector_residual": 2.4029139675357957e-16
+      },
+      "additional_eight_address_decoder_check": {
+        "address_dimension": 8,
+        "kraus_rank": 2,
+        "eta": 0.5,
+        "tag_dimension": 2,
+        "shift": 2,
+        "explicit_decoder_vector_residual": 2.4029139675357957e-16
+      },
+      "checks": [
+        {
+          "kind": "unique_mark_phase",
+          "L": 3,
+          "marked": 1,
+          "miss_probability": 0.125,
+          "physical_commutation_residual": 6.938893903907228e-17,
+          "response_leakage_probability": 0.0,
+          "exact_channel_entry_residual": 2.4424906541753444e-15
+        },
+        {
+          "kind": "full_bit_choi",
+          "L": 3,
+          "marked": [
+            2
+          ],
+          "logical_dimension": 8,
+          "reference_dimension": 8,
+          "miss_probability": 0.125,
+          "physical_commutation_residual": 4.163336342344337e-17,
+          "response_leakage_probability": 0.0,
+          "choi_trace_preservation_residual": 3.3306690738754696e-16,
+          "choi_minimum_eigenvalue": -1.9796831892367687e-16,
+          "choi_trace_norm_error_to_ideal": 0.16535945694153784,
+          "proved_diamond_upper_bound": 1.4142135623730951,
+          "exact_faulty_bit_choi_residual": 3.0531133177191805e-16,
+          "entangled_address_plus_target_residual": 3.191891195797325e-16
+        },
+        {
+          "kind": "full_bit_choi",
+          "L": 3,
+          "marked": [
+            0,
+            1
+          ],
+          "logical_dimension": 8,
+          "reference_dimension": 8,
+          "miss_probability": 0.125,
+          "physical_commutation_residual": 4.163336342344337e-17,
+          "response_leakage_probability": 0.0,
+          "choi_trace_preservation_residual": 3.3306690738754696e-16,
+          "choi_minimum_eigenvalue": -1.5185494381319643e-16,
+          "choi_trace_norm_error_to_ideal": 0.2878469547165002,
+          "proved_diamond_upper_bound": 1.4142135623730951,
+          "entangled_address_plus_target_residual": 3.191891195797325e-16
+        }
+      ]
+    }
+  ]
+}
