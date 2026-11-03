@@ -64,8 +64,8 @@ The normalized Choi matrix is
 
 ```math
 J=\frac1D\sum_e
-|\operatorname{vec}K_e\rangle
-\langle\operatorname{vec}K_e|.
+|\mathrm{vec}K_e\rangle
+\langle\mathrm{vec}K_e|.
 ```
 
 Equivalently, it is the output on the maximally entangled state between the complete logical address-target system and a $`D`$-dimensional reference. In particular, the logical target is entangled with its reference copy. Agreement of this whole matrix establishes agreement of the finite channels, rather than merely agreement on computational-basis inputs or a target initialized to $`|-\rangle`$.
@@ -73,8 +73,8 @@ Equivalently, it is the output on the maximally entangled state between the comp
 For a unique mark the program compares the entire Choi matrix against
 
 ```math
-(1-q)J(\operatorname{Ad}_{U_w})
-+qJ(\operatorname{id}),
+(1-q)J(\mathrm{Ad}_{U_w})
++qJ(\mathrm{id}),
 \qquad q=(1-\eta)^L.
 ```
 

@@ -34,7 +34,7 @@ Write $`\widehat\Phi`$ for the associated complementary channel and define
 Each $`\sigma_x`$ is a density operator on $`\mathbb C^r`$. The relevant dimension is the real affine dimension
 
 ```math
-d=\dim_{\mathbb R}\operatorname{aff}\{\sigma_x:x\in[N]\},
+d=\dim_{\mathbb R}\mathrm{aff}\{\sigma_x:x\in[N]\},
 \qquad
 0\leq d\leq\min\{N-1,r^2-1\}.
 ```
@@ -129,10 +129,10 @@ The encoding is a coherent operation controlled in a specified basis. It does no
 Let
 
 ```math
-\mathcal E=\operatorname{id}_{XB}\otimes\Phi_Q.
+\mathcal E=\mathrm{id}_{XB}\otimes\Phi_Q.
 ```
 
-The complement of $`\mathcal E\circ\operatorname{Ad}_V`$ traces out the protected registers as well as the channel output. For an arbitrary reference $`R`$, expand a joint input as
+The complement of $`\mathcal E\circ\mathrm{Ad}_V`$ traces out the protected registers as well as the channel output. For an arbitrary reference $`R`$, expand a joint input as
 
 ```math
 \rho_{RX}=\sum_{x,y}\rho^R_{xy}\otimes\lvert x\rangle\langle y\rvert.
@@ -142,8 +142,8 @@ Tracing $`X`$ leaves only $`x=y`$, and tracing $`B`$ leaves only equal branch la
 
 ```math
 \begin{aligned}
-\left(\operatorname{id}_R\otimes
-\widehat{\mathcal E\circ\operatorname{Ad}_V}\right)(\rho_{RX})
+\left(\mathrm{id}_R\otimes
+\widehat{\mathcal E\circ\mathrm{Ad}_V}\right)(\rho_{RX})
 &=\sum_x\rho^R_{xx}\otimes
 \left(\eta\sigma_x+\sum_jp_j(x)\sigma_{a_j}\right)\\
 &=\rho_R\otimes\tau.
@@ -182,7 +182,7 @@ Their Gram matrix is the same for every $`x`$:
 Choose one eigendecomposition
 
 ```math
-C=H\operatorname{diag}(\mu_1,\ldots,\mu_r)H^\dagger.
+C=H\mathrm{diag}(\mu_1,\ldots,\mu_r)H^\dagger.
 ```
 
 For each positive eigenvalue, put
@@ -229,8 +229,8 @@ which is independent of $`x`$. Consequently the Stinespring isometry of encoding
 The syndrome–environment vector is normalized and fixed. The same factorization holds with an arbitrary reference attached to $`\lvert\psi\rangle`$. Discarding $`BQ`$ after $`D`$ defines a CPTP recovery $`\mathcal R`$ satisfying
 
 ```math
-\mathcal R\circ\mathcal E\circ\operatorname{Ad}_V
-=\operatorname{id}_X.
+\mathcal R\circ\mathcal E\circ\mathrm{Ad}_V
+=\mathrm{id}_X.
 ```
 
 All choices in this decoder depend on the known channel and the code, and none depends on the unknown Boolean function. The arbitrary unitary completion also defines a valid recovery on states outside the code; the approximation proof in the compiler only requires exactness on the code itself.
@@ -244,22 +244,22 @@ V_L\lvert x\rangle
 =\lvert x\rangle\lvert\Theta_x\rangle^{\otimes L},
 \qquad
 \mathcal E_L
-=\operatorname{id}_{X B_1\cdots B_L}\otimes\Phi^{\otimes L}.
+=\mathrm{id}_{X B_1\cdots B_L}\otimes\Phi^{\otimes L}.
 ```
 
 The fresh-environment assumption makes the complementary state on each logical basis input equal to $`\tau^{\otimes L}`$. Tracing the protected logical and branch registers again gives, for every reference,
 
 ```math
-\left(\operatorname{id}_R\otimes
-\widehat{\mathcal E_L\circ\operatorname{Ad}_{V_L}}\right)(\rho_{RX})
+\left(\mathrm{id}_R\otimes
+\widehat{\mathcal E_L\circ\mathrm{Ad}_{V_L}}\right)(\rho_{RX})
 =\rho_R\otimes\tau^{\otimes L}.
 ```
 
 Applying the controlled decoder $`D_x`$ independently to the probes and discarding their outputs gives a known recovery $`\mathcal R_L`$ with
 
 ```math
-\mathcal R_L\circ\mathcal E_L\circ\operatorname{Ad}_{V_L}
-=\operatorname{id}_X.
+\mathcal R_L\circ\mathcal E_L\circ\mathrm{Ad}_{V_L}
+=\mathrm{id}_X.
 ```
 
 If $`d=0`$, then $`m=1`$, $`\eta=1`$ and $`p_1(x)=0`$. The probe is simply $`\lvert0\rangle_B\lvert x\rangle_Q`$, and the same recovery proof applies. Thus one physical query will suffice exactly in the compiler. This case can occur even when the channel has more than one Kraus operator.

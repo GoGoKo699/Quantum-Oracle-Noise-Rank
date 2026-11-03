@@ -5,7 +5,7 @@ This note derives the search consequence of the oracle compiler and separates qu
 Throughout, the supplied physical query is
 
 ```math
-\mathcal N_f=(\Phi_Q\otimes\operatorname{id}_A)\circ\operatorname{Ad}_{U_f},
+\mathcal N_f=(\Phi_Q\otimes\mathrm{id}_A)\circ\mathrm{Ad}_{U_f},
 \qquad
 U_f|z,b\rangle=|z,b\oplus f(z)\rangle.
 ```
@@ -84,8 +84,8 @@ In particular, the marked branch still has norm one. The overlap of a marked and
 
 ```math
 \widetilde{\mathcal O}_w
-=(1-q)\operatorname{Ad}_{O_w}
-+q\,\operatorname{id},
+=(1-q)\mathrm{Ad}_{O_w}
++q\,\mathrm{id},
 \qquad
 O_w=I-2|w\rangle\langle w|.
 ```
@@ -98,8 +98,8 @@ In the controlled-phase basis, a unique-mark function has exactly one negative b
 
 ```math
 \widetilde{\mathcal U}_w
-=(1-q)\operatorname{Ad}_{U_w}
-+q\,\operatorname{id}
+=(1-q)\mathrm{Ad}_{U_w}
++q\,\mathrm{id}
 ```
 
 after the target-Hadamard wrappers. This is equality of channels on the entire logical address-target system, including inputs entangled with an arbitrary reference. It is stronger than agreement on a target initialized to a classical bit. The [verification program](../verification/README.md) checks the complete normalized Choi matrix of this identity.
@@ -126,7 +126,7 @@ This operator-norm estimate is uniform on the complete logical space and remains
 
 ```math
 \bigl\|\widetilde{\mathcal U}_f-
-\operatorname{Ad}_{U_f}\bigr\|_\diamond
+\mathrm{Ad}_{U_f}\bigr\|_\diamond
 \le \min\{2,4(1-\eta)^{L/2}\}.
 ```
 
@@ -148,8 +148,8 @@ L=\left\lceil2m\ln(4T/\epsilon)\right\rceil
 also suffices. If $`\eta=1`$, one physical call is exact and the logarithmic formula is unnecessary. The general physical query count is
 
 ```math
-M=TL=O\!\left(T(d+1)\log\frac{T}{\epsilon}\right)
-\le O\!\left(Tr^2\log\frac{T}{\epsilon}\right).
+M=TL=O\!\left(T(d+1)\log\frac{4T}{\epsilon}\right)
+\le O\!\left(Tr^2\log\frac{4T}{\epsilon}\right).
 ```
 
 This is a uniform simulation guarantee for algorithms using the supplied bit oracle. It does not cover arbitrary noisy unitaries whose input-output structure supplies no idle response eigenstate.
@@ -159,7 +159,7 @@ This is a uniform simulation guarantee for algorithms using the supplied bit ora
 For a unique mark, the exact mixture gives the sharper per-query estimate
 
 ```math
-\|\widetilde{\mathcal O}_w-\operatorname{Ad}_{O_w}\|_\diamond
+\|\widetilde{\mathcal O}_w-\mathrm{Ad}_{O_w}\|_\diamond
 =2q
 \quad(N\ge2).
 ```

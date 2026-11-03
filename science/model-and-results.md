@@ -17,9 +17,9 @@ One physical noisy call is
 
 ```math
 \mathcal N_f
-=(\Phi_Q\otimes\operatorname{id}_A)\circ\operatorname{Ad}_{U_f},
+=(\Phi_Q\otimes\mathrm{id}_A)\circ\mathrm{Ad}_{U_f},
 \qquad
-\operatorname{Ad}_U(\rho)=U\rho U^\dagger.
+\mathrm{Ad}_U(\rho)=U\rho U^\dagger.
 ```
 
 Here $`\Phi`$ is a known CPTP channel on $`\mathbb C^N`$, with equal input and output dimension. It is independent of $`f`$ and is the same channel on every call. Each use has a fresh environment, initially uncorrelated with the algorithm and other uses. The algorithm retains both the noisy address output and the answer; the environment is inaccessible.
@@ -52,7 +52,7 @@ The rank $`r`$ is the minimum Stinespring environment dimension. Define the comp
 and their real affine dimension
 
 ```math
-d=\dim_{\mathbb R}\operatorname{aff}\{\sigma_x:x\in[N]\}
+d=\dim_{\mathbb R}\mathrm{aff}\{\sigma_x:x\in[N]\}
 \leq\min\{N-1,r^2-1\}.
 ```
 
@@ -82,7 +82,7 @@ For a linear map $`\Lambda`$, the diamond norm is
 ```math
 \|\Lambda\|_\diamond
 =\sup_{k\geq1}\ \sup_{\|Z\|_1=1}
-\left\|(\Lambda\otimes\operatorname{id}_k)(Z)\right\|_1.
+\left\|(\Lambda\otimes\mathrm{id}_k)(Z)\right\|_1.
 ```
 
 We do not divide this norm by two. Two channels have diamond distance at most two. An output-channel error at most $`\epsilon`$ changes the probability of any final measurement event by at most $`\epsilon/2`$.
@@ -96,7 +96,7 @@ For every channel and access model described above, there are encoding, routing 
 ```math
 \left\|
 \widetilde{\mathcal U}_{f,L}
--\operatorname{Ad}_{U_f^{XY}}
+-\mathrm{Ad}_{U_f^{XY}}
 \right\|_\diamond
 \leq\min\left\{2,4(1-\eta)^{L/2}\right\}
 \qquad\text{for every }f:[N]\to\{0,1\}.

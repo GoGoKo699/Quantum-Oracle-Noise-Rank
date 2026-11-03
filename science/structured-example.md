@@ -94,7 +94,7 @@ Z_X^s|x\rangle_X\otimes|y_s\rangle_B\otimes|0\rangle_Q,
 |y_s\rangle=\frac{|0\rangle+is|1\rangle}{\sqrt2}.
 ```
 
-Let $`S=\operatorname{diag}(1,i)`$. The known decoder $`H S^\dagger`$ on the tag sends
+Let $`S=\mathrm{diag}(1,i)`$. The known decoder $`H S^\dagger`$ on the tag sends
 
 ```math
 |y_{+1}\rangle\longmapsto|0\rangle,
@@ -110,7 +110,7 @@ The same circuit is used after the first-match oracle operation. In that case th
 
 ### Gate decomposition of the correction
 
-Write the protected logical address as $`x=\sum_{k=0}^{n-1}2^k x_k`$ and define $`P(\varphi)=\operatorname{diag}(1,e^{i\varphi})`$. Then
+Write the protected logical address as $`x=\sum_{k=0}^{n-1}2^k x_k`$ and define $`P(\varphi)=\mathrm{diag}(1,e^{i\varphi})`$. Then
 
 ```math
 Z_X=\bigotimes_{k=0}^{n-1}P(2\pi\,2^{k-n}).
@@ -125,11 +125,11 @@ Z_X^{-(-1)^b}=Z_X^\dagger(Z_X^2)^b.
 It uses $`O(n)`$ known one-qubit phase gates and controlled phase gates. Each controlled phase can be decomposed into two CNOTs and three one-qubit phase gates. For control $`c`$ and target $`t`$,
 
 ```math
-\operatorname{CP}(\varphi)
+\mathrm{CP}(\varphi)
 =P_c(\varphi/2)P_t(\varphi/2)\,
-\operatorname{CNOT}_{c,t}\,
+\mathrm{CNOT}_{c,t}\,
 P_t(-\varphi/2)\,
-\operatorname{CNOT}_{c,t}.
+\mathrm{CNOT}_{c,t}.
 ```
 
 Here operator products act right to left; the two outside phase gates commute. This identity includes the relative controlled phase explicitly and does not discard a phase that becomes observable under control.
@@ -162,7 +162,7 @@ When at least one distinguished branch is present, exactly one response receives
 q=2^{-L}.
 ```
 
-The full logical bit-query diamond error is at most $`4\,2^{-L/2}`$. For a unique mark, the logical channel is exactly $`(1-2^{-L})\operatorname{Ad}_{U_w}+2^{-L}\operatorname{id}`$, as proved in [Search and resources](search-and-resources.md).
+The full logical bit-query diamond error is at most $`4\,2^{-L/2}`$. For a unique mark, the logical channel is exactly $`(1-2^{-L})\mathrm{Ad}_{U_w}+2^{-L}\mathrm{id}`$, as proved in [Search and resources](search-and-resources.md).
 
 ## 5. Gate count, width, and resets
 
@@ -202,7 +202,7 @@ A fixed finite universal gate set can approximate the required one-qubit rotatio
 
 ```math
 O\!\left(
-TnL\;\operatorname{polylog}\frac{TnL}{\epsilon}
+TnL\;\mathrm{polylog}\frac{TnL}{\epsilon}
 \right).
 ```
 
@@ -236,7 +236,7 @@ At fixed final error, a Grover search has $`T=O(\sqrt N)`$, $`n=\log_2N`$, and $
 \text{known gates before finite-set synthesis} &:\quad
 O(\sqrt N\log^2N),\\
 \text{known gates after finite-set synthesis} &:\quad
-\sqrt N\,\operatorname{polylog}N,\\
+\sqrt N\,\mathrm{polylog}N,\\
 \text{reusable protected width} &:\quad O(\log^2N).
 \end{aligned}
 ```

@@ -12,6 +12,8 @@
 - Implement the explicit global rank-two channel example: science/structured-example.md.
 - Interpret the criterion without overstating rank as a classification: science/interpretation.md.
 - Compare previous oracle-distillation, filtration, noisy-search and convex-QEC results: references/related-work.md and references/references.bib.
+- Enter through the selected Watrous (2018) foundations and four-address worked example: learning/README.md and learning/watrous-bridge.md.
+- Follow the project-intrinsic understanding map: learning/milestones.md, exactly M01–M30, with 12 background and 18 narrative milestones. Its source pointers lead back to the authoritative science.
 - Reproduce finite checks and understand their limits: verification/README.md, verification/verify.py, verification/expected-results.json and requirements.txt.
 
 ## Essential distinctions
@@ -23,3 +25,5 @@ The general theorem is a query-complexity guarantee. It does not make arbitrary 
 All distances are unhalved diamond norms. The generic designated weight is eta=1/(d+1), with d+1<=r^2. The universal per-query bound is min{2,4(1-eta)^(L/2)}. The exact faulty-channel mixture is asserted for a unique marked address; the arbitrary-function theorem uses the uniform error bound. For d=0, one physical query is exact.
 
 Treat the analytical proofs as the source of dimension-independent claims. Numerical checks exercise finite fixtures and channel identities. Preserve the access, resource and attribution qualifications when summarizing the results.
+
+Watrous (2018) is the sole educational anchor. Primary research citations remain necessary for attribution. The common milestone map describes understanding targets and dependencies; it is independent of any reader's personal assessment or progress.

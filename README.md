@@ -10,7 +10,7 @@ Let $`d`$ be the real affine dimension of the complementary outputs on computati
 
 ```math
 \left\|\widetilde{\mathcal U}_{f,L}
--\operatorname{Ad}_{U_f}\right\|_\diamond
+-\mathrm{Ad}_{U_f}\right\|_\diamond
 \leq \min\{2,4(1-\eta)^{L/2}\}.
 ```
 
@@ -22,7 +22,7 @@ This estimate is uniform over Boolean functions and arbitrary reference-entangle
 | Degenerate environment geometry | Exact one-call simulation when $`d=0`$, even for some high-rank channels | [Limiting cases](science/model-and-results.md#5-what-the-environment-dimension-does-and-does-not-say) |
 | General $`T`$-query algorithm | $`O((d+1)T\log(4T/\epsilon))`$ physical calls at total error $`\epsilon`$ | [Composition and resources](science/search-and-resources.md) |
 | Unstructured search | $`O(r^2\sqrt N\log N)`$ physical calls at fixed error | [Search consequence](science/search-and-resources.md#4-search-and-verification) |
-| Explicit global rank-two channel | Search with $`\sqrt N\,\operatorname{polylog}N`$ known gates and $`O(\log^2N)`$ reusable protected qubits | [Phase-gradient construction](science/structured-example.md) |
+| Explicit global rank-two channel | Search with $`\sqrt N\,\mathrm{polylog}N`$ known gates and $`O(\log^2N)`$ reusable protected qubits | [Phase-gradient construction](science/structured-example.md) |
 
 The rank bound is sufficient, not a classification or a matching lower bound. The general theorem counts oracle calls; efficient channel-dependent preparation and recovery require additional structure. The rank-two example supplies such a circuit explicitly, including finite gate precision and channel-mismatch accounting.
 
@@ -38,6 +38,10 @@ Start with the [science guide](science/README.md) for the connected account, or 
 6. [Interpretation](science/interpretation.md): what the environment criterion explains and where it stops.
 
 [Related work](references/related-work.md) compares the result with oracle distillation, error filtration, noisy-search results and convex error-correction constructions. The [bibliography](references/references.bib) records the cited primary sources. The weak-query framework, exact error correction and convex geometry have established antecedents; the contribution is their specified combination into the present universal simulation theorem.
+
+## Learn the construction
+
+The [learning route](learning/README.md) uses **John Watrous, The Theory of Quantum Information (2018)** as its single educational anchor. The [source-to-project bridge](learning/watrous-bridge.md) translates the channel and distance formalism and develops a four-address worked example. The [30-milestone map](learning/milestones.md) connects 12 foundation milestones with 18 milestones that assemble the construction, its consequences and its resource limits.
 
 ## Reproduce the finite checks
 
