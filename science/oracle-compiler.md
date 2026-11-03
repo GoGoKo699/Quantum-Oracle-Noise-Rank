@@ -19,10 +19,10 @@ One physical call is the channel
 
 ```math
 \mathcal N_f
-=(\Phi_Q\otimes\operatorname{id}_A)\circ\operatorname{Ad}_{U_f}.
+=(\Phi_Q\otimes\mathrm{id}_A)\circ\mathrm{Ad}_{U_f}.
 ```
 
-The channel $`\Phi`$ is known, fixed, independent of $`f`$, and memoryless between calls. Only the physical address register is noisy. The logical address $`X`$, logical response $`Y`$, tags and other workspace are protected. The target channel is $`\operatorname{Ad}_{U_f^{XY}}`$.
+The channel $`\Phi`$ is known, fixed, independent of $`f`$, and memoryless between calls. Only the physical address register is noisy. The logical address $`X`$, logical response $`Y`$, tags and other workspace are protected. The target channel is $`\mathrm{Ad}_{U_f^{XY}}`$.
 
 Use the notation and code from [the geometric construction](convex-code.md): $`d`$ is the real affine dimension of the computational-basis complementary states,
 
@@ -39,8 +39,8 @@ V_L\lvert x\rangle_X
 In every probe, tag zero has weight $`\eta`$ and carries physical address $`x`$. The other tags carry the anchor addresses with channel-dependent weights. They can have arbitrary values under $`f`$. Write $`\mathcal E_L`$ for $`\Phi^{\otimes L}`$ on the probe addresses, with identity action on all protected registers. There is a known recovery $`\mathcal R_L`$ satisfying
 
 ```math
-\mathcal R_L\circ\mathcal E_L\circ\operatorname{Ad}_{V_L}
-=\operatorname{id}_X.
+\mathcal R_L\circ\mathcal E_L\circ\mathrm{Ad}_{V_L}
+=\mathrm{id}_X.
 ```
 
 All channels and isometries in this identity can be tensored with an arbitrary reference or with the protected response $`Y`$.
@@ -52,7 +52,7 @@ For a computational-basis string of protected tags $`b=(b_1,\ldots,b_L)`$, defin
 ```math
 s_i(b)
 =\mathbf 1_{\{b_i=0\}}
-\prod_{j<i}\mathbf 1_{\{b_j\ne0\}}.
+\prod_{j\lt i}\mathbf 1_{\{b_j\ne0\}}.
 ```
 
 The selectors are mutually exclusive. If any tag is zero, exactly the first such tag is selected; otherwise all selectors vanish. Define
@@ -180,7 +180,7 @@ This is an operator-norm bound on the full logical space. It already includes su
 For any two isometries $`W,V`$, the associated channels satisfy
 
 ```math
-\left\|\operatorname{Ad}_W-\operatorname{Ad}_V\right\|_\diamond
+\left\|\mathrm{Ad}_W-\mathrm{Ad}_V\right\|_\diamond
 \leq2\|W-V\|_\infty.
 ```
 
@@ -197,9 +197,9 @@ Applying the product noise and CPTP recovery cannot increase the diamond distanc
 
 ```math
 \left\|
-(\mathcal R_L\otimes\operatorname{id}_Y)
-\circ\mathcal E_L\circ\operatorname{Ad}_{W_f}
--\operatorname{Ad}_{C_f}
+(\mathcal R_L\otimes\mathrm{id}_Y)
+\circ\mathcal E_L\circ\mathrm{Ad}_{W_f}
+-\mathrm{Ad}_{C_f}
 \right\|_\diamond
 \leq\min\{2,4(1-\eta)^{L/2}\}.
 ```
@@ -209,7 +209,7 @@ Finally conjugate the protected response by $`H_Y`$ before and after the control
 ```math
 \boxed{
 \left\|\widetilde{\mathcal U}_{f,L}
--\operatorname{Ad}_{U_f^{XY}}\right\|_\diamond
+-\mathrm{Ad}_{U_f^{XY}}\right\|_\diamond
 \leq\min\{2,4(1-\eta)^{L/2}\}.
 }
 ```
