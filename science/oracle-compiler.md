@@ -52,7 +52,7 @@ For a computational-basis string of protected tags $`b=(b_1,\ldots,b_L)`$, defin
 ```math
 s_i(b)
 =\mathbf 1_{\{b_i=0\}}
-\prod_{j<i}\mathbf 1_{\{b_j\ne0\}}.
+\prod_{j\lt i}\mathbf 1_{\{b_j\ne0\}}.
 ```
 
 The selectors are mutually exclusive. If any tag is zero, exactly the first such tag is selected; otherwise all selectors vanish. Define
